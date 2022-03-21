@@ -1,0 +1,16 @@
+---
+framework: jasmine
+preRun:
+  command:
+    - npm ci
+    - npm run prepare
+preMerge:
+  pattern:
+    - test/**/**.test.js
+postMerge:
+  pattern:
+    - test/**/**.test.js
+postRun:
+  command:
+    - node --version
+version: 1.0
